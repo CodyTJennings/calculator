@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8" />
+
+    <style>
+        #calculator {
+            
+            margin: auto;
+            width: 50%;
+        }
+
+        #button-area-numbers {
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+
+            height: 400px;
+            width: 250px;
+
+        }
+
+        #button-area-operators {
+            display: grid;
+        }
+
+        #button-area-enter {
+            display: grid;
+        }
+
+        #clear {
+            height: 30px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="display-area">
+            <p>Display result here</p>
+        </div>
+        <button type="button" id="clear">Clear</button>
+        <div id="button-area-numbers">
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">0</button>
+            <div id="button-area-operators">
+                <button type="button">+</button>
+                <button type="button">-</button>
+                <button type="button">*</button>
+                <button type="button">/</button>
+
+            </div>
+            <div id="button-area-enter">
+                <button type="button">=</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        //Math operators
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        function subtract(num1, num2) {
+            return num1 - num2;
+        }
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+        function divide(num1, num2) {
+            return num1 / num2;
+        }
+
+        function operate(operator, num1, num2) { //calls appropriate function based on operator and returns result
+            switch (operator) {
+                case '+':
+                    return add(num1, num2);
+                case '-':
+                    return subtract(num1, num2);
+                case '*':
+                    return multiply(num1, num2);
+                case '/':
+                    return divide(num1, num2);
+            }
+        }
+    </script>
+</body>
+
+</html>
